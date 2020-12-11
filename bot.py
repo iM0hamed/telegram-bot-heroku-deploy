@@ -23,7 +23,11 @@ def help(update, context):
 def piracy(update, context):
     update.message.reply_text('Ahhan, FBI wants to know your location!')
 
-
+def info(update, context):
+    telegram
+    update.message.reply_text(logger)
+    
+    
 def echo(update, context):
     """Echo the user message."""
     update.message.reply_text(update.message.text)
@@ -48,7 +52,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CommandHandler("piracy", piracy))
-
+    dp.add_handler(CommandHandler("info", info))
     # on noncommand i.e message - echo the message on Telegram
     dp.add_handler(MessageHandler(Filters.text, echo))
 
